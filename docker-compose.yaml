@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  master:
+    build: .
+    ports:
+      - 8089:8089
+    command: -f ${filename} --master --expect-workers ${numberofworkers} -H ${host}
+  worker:
+    build: .
+    ports:
+      - "6000-6500:6501"
+    command: -f ${filename} --worker --master-host master
