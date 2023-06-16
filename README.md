@@ -29,8 +29,8 @@ Note: We need to provide Number od Users and Spawn Rate in the Locust UI as per 
 ---> Headless Mode: ``` locust -f org/thoughtworks/basicUI.py --headless -H https://restful-booker.herokuapp.com -u 2 -r 1 -t 10s ```
 
 -H means the host
--u means peak number of concurrent users with which we want to perform testing
--r means spawn rate (Rate at which users are created or spawned)
--t means total time for which we want to run the script
+/n -u means peak number of concurrent users with which we want to perform testing
+/n -r means spawn rate (Rate at which users are created or spawned)
+/n -t means total time for which we want to run the script
 
 Note: When running in headless mode we need to provide number of users(-u), spawn rate(-r) and host(-H)
